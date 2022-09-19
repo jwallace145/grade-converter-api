@@ -1,0 +1,372 @@
+[
+    {
+        "yds": "5.0",
+        "french": "2-",
+        "british": "MM 1c"
+    },
+    {
+        "yds": "5.1",
+        "french": "2",
+        "british": "MD 2a"
+    },
+    {
+        "yds": "5.2",
+        "french": "3",
+        "british": "D 2c"
+    },
+    {
+        "yds": "5.3",
+        "french": "3+",
+        "british": "VD 3a"
+    },
+    {
+        "yds": "5.4",
+        "french": "4a",
+        "british": "VD 3c"
+    },
+    {
+        "yds": "5.5",
+        "french": "4b",
+        "british": "MS 4a"
+    },
+    {
+        "yds": "5.6",
+        "french": "4c",
+        "british": "S 4b"
+    },
+    {
+        "yds": "5.7",
+        "french": "5a",
+        "british": "MVS 4b"
+    },
+    {
+        "yds": "5.7+",
+        "french": "5a",
+        "british": "MVS 4b"
+    },
+    {
+        "yds": "5.8-",
+        "french": "5b",
+        "british": "VS 4c"
+    },
+    {
+        "yds": "5.8",
+        "french": "5b",
+        "british": "HVS 4c"
+    },
+    {
+        "yds": "5.8+",
+        "french": "5b",
+        "british": "HVS 4c"
+    },
+    {
+        "yds": "5.9-",
+        "french": "5c",
+        "british": "HVS 4c"
+    },
+    {
+        "yds": "5.9",
+        "french": "5c",
+        "british": "HVS 5a"
+    },
+    {
+        "yds": "5.9+",
+        "french": "5c",
+        "british": "E1 5a"
+    },
+    {
+        "yds": "5.10a",
+        "french": "6a",
+        "british": "E1 5a"
+    },
+    {
+        "yds": "5.10-",
+        "french": "6a",
+        "british": "E1 5a"
+    },
+    {
+        "yds": "5.10a/b",
+        "french": "6a+",
+        "british": "E2 5b"
+    },
+    {
+        "yds": "5.10b",
+        "french": "6a+",
+        "british": "E2 5b"
+    },
+    {
+        "yds": "5.10",
+        "french": "6b",
+        "british": "E2 5b"
+    },
+    {
+        "yds": "5.10b/c",
+        "french": "6b",
+        "british": "E2 5b"
+    },
+    {
+        "yds": "5.10c",
+        "french": "6b",
+        "british": "E2 5b"
+    },
+    {
+        "yds": "5.10+",
+        "french": "6b+",
+        "british": "E3 5b"
+    },
+    {
+        "yds": "5.10c/d",
+        "french": "6b+",
+        "british": "E3 5b"
+    },
+    {
+        "yds": "5.10d",
+        "french": "6b+",
+        "british": "E3 5b"
+    },
+    {
+        "yds": "5.11a",
+        "french": "6c",
+        "british": "E3 5c"
+    },
+    {
+        "yds": "5.11-",
+        "french": "6c",
+        "british": "E3 5c"
+    },
+    {
+        "yds": "5.11a/b",
+        "french": "6c",
+        "british": "E3 5c"
+    },
+    {
+        "yds": "5.11b",
+        "french": "6c",
+        "british": "E3 5c"
+    },
+    {
+        "yds": "5.11",
+        "french": "6c+",
+        "british": "E4 5c"
+    },
+    {
+        "yds": "5.11b/c",
+        "french": "6c+",
+        "british": "E4 6a"
+    },
+    {
+        "yds": "5.11c",
+        "french": "6c+",
+        "british": "E4 6a"
+    },
+    {
+        "yds": "5.11+",
+        "french": "7a",
+        "british": "E4 6a"
+    },
+    {
+        "yds": "5.11c/d",
+        "french": "7a",
+        "british": "E4 6a"
+    },
+    {
+        "yds": "5.11d",
+        "french": "7a",
+        "british": "E5 6a"
+    },
+    {
+        "yds": "5.12a",
+        "french": "7a+",
+        "british": "E5 6a"
+    },
+    {
+        "yds": "5.12-",
+        "french": "7a+",
+        "british": "E5 6a"
+    },
+    {
+        "yds": "5.12a/b",
+        "french": "7b",
+        "british": "E5 6a"
+    },
+    {
+        "yds": "5.12b",
+        "french": "7b",
+        "british": "E5 6b"
+    },
+    {
+        "yds": "5.12",
+        "french": "7b+",
+        "british": "E6 6b"
+    },
+    {
+        "yds": "5.12b/c",
+        "french": "7b+",
+        "british": "E6 6b"
+    },
+    {
+        "yds": "5.12c",
+        "french": "7b+",
+        "british": "E6 6b"
+    },
+    {
+        "yds": "5.12+",
+        "french": "7c",
+        "british": "E6 6b"
+    },
+    {
+        "yds": "5.12c/d",
+        "french": "7c",
+        "british": "E6 6b"
+    },
+    {
+        "yds": "5.12d",
+        "french": "7c",
+        "british": "E6 6b"
+    },
+    {
+        "yds": "5.13a",
+        "french": "7c+",
+        "british": "E6 6c"
+    },
+    {
+        "yds": "5.13-",
+        "french": "7c+",
+        "british": "E7 6c"
+    },
+    {
+        "yds": "5.13a/b",
+        "french": "8a",
+        "british": "E7 6c"
+    },
+    {
+        "yds": "5.13b",
+        "french": "8a",
+        "british": "E7 6c"
+    },
+    {
+        "yds": "5.13",
+        "french": "8a",
+        "british": "E7 6c"
+    },
+    {
+        "yds": "5.13b/c",
+        "french": "8a+",
+        "british": "E7 6c"
+    },
+    {
+        "yds": "5.13c",
+        "french": "8a+",
+        "british": "E7 7a"
+    },
+    {
+        "yds": "5.13+",
+        "french": "8b",
+        "british": "E7 7a"
+    },
+    {
+        "yds": "5.13c/d",
+        "french": "8b",
+        "british": "E8 7a"
+    },
+    {
+        "yds": "5.13d",
+        "french": "8b",
+        "british": "E8 7a"
+    },
+    {
+        "yds": "5.14a",
+        "french": "8b+",
+        "british": "E8 7a"
+    },
+    {
+        "yds": "5.14-",
+        "french": "8b+",
+        "british": "E8 7a"
+    },
+    {
+        "yds": "5.14a/b",
+        "french": "8c",
+        "british": "E9 7b"
+    },
+    {
+        "yds": "5.14b",
+        "french": "8c",
+        "british": "E9 7b"
+    },
+    {
+        "yds": "5.14",
+        "french": "8c+",
+        "british": "E9 7b"
+    },
+    {
+        "yds": "5.14b/c",
+        "french": "8c+",
+        "british": "E9 7b"
+    },
+    {
+        "yds": "5.14c",
+        "french": "8c+",
+        "british": "E9 7b"
+    },
+    {
+        "yds": "5.14+",
+        "french": "9a",
+        "british": "E10 7b"
+    },
+    {
+        "yds": "5.14c/d",
+        "french": "9a",
+        "british": "E10 7b"
+    },
+    {
+        "yds": "5.14d",
+        "french": "9a",
+        "british": "E10 7c"
+    },
+    {
+        "yds": "5.15a",
+        "french": "9a+",
+        "british": "E11 7c"
+    },
+    {
+        "yds": "5.15-",
+        "french": "9a+",
+        "british": "E11 7c"
+    },
+    {
+        "yds": "5.15a/b",
+        "french": "9a+",
+        "british": "E11 7c"
+    },
+    {
+        "yds": "5.15b",
+        "french": "9b",
+        "british": "E11 8a"
+    },
+    {
+        "yds": "5.15",
+        "french": "9b",
+        "british": "E11 8a"
+    },
+    {
+        "yds": "5.15c",
+        "french": "9b+",
+        "british": "E11 8a"
+    },
+    {
+        "yds": "5.15+",
+        "french": "9b+",
+        "british": "E11 8b"
+    },
+    {
+        "yds": "5.15c/d",
+        "french": "9c",
+        "british": "E11 8c"
+    },
+    {
+        "yds": "5.15d",
+        "french": "9c",
+        "british": "E11 8c"
+    }
+]
