@@ -4,7 +4,7 @@ package database
 IMPORTS
 */
 import (
-	"fmt"
+	"log"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
@@ -16,7 +16,7 @@ import (
 /*
 CONSTANTS
 */
-const DDB_GRADES_TABLE = "ClimbingGrades"
+const DDB_GRADES_TABLE string = "ClimbingGrades"
 
 /*
 STRUCTS
@@ -35,14 +35,14 @@ type Grade struct {
 METHODS
 */
 func New(region string) *DynamoDBGateway {
-	fmt.Printf("Creating DynamoDB Gateway in region %s\n", region)
+	log.Printf("Creating DynamoDB Gateway in region %s\n", region)
 
 	sess, err := session.NewSession(&aws.Config{
 		Region: aws.String(region)},
 	)
 
 	if err != nil {
-		fmt.Printf("Unexpected error occurred creating a new AWS session: %s", err)
+		log.Printf("Unexpected error occurred creating a new AWS session: %s", err)
 	}
 
 	ddb := DynamoDBGateway{
@@ -53,7 +53,7 @@ func New(region string) *DynamoDBGateway {
 }
 
 func (ddb DynamoDBGateway) GetGradeByFrench(french string) Grade {
-	fmt.Printf("Getting '%s' grade from table '%s'\n", french, DDB_GRADES_TABLE)
+	log.Printf("Getting '%s' grade from table '%s'\n", french, DDB_GRADES_TABLE)
 
 	result, err := ddb.client.Query(
 		&dynamodb.QueryInput{
@@ -72,18 +72,18 @@ func (ddb DynamoDBGateway) GetGradeByFrench(french string) Grade {
 		if aerr, ok := err.(awserr.Error); ok {
 			switch aerr.Code() {
 			case dynamodb.ErrCodeProvisionedThroughputExceededException:
-				fmt.Println(dynamodb.ErrCodeProvisionedThroughputExceededException, aerr.Error())
+				log.Println(dynamodb.ErrCodeProvisionedThroughputExceededException, aerr.Error())
 			case dynamodb.ErrCodeResourceNotFoundException:
-				fmt.Println(dynamodb.ErrCodeResourceNotFoundException, aerr.Error())
+				log.Println(dynamodb.ErrCodeResourceNotFoundException, aerr.Error())
 			case dynamodb.ErrCodeRequestLimitExceeded:
-				fmt.Println(dynamodb.ErrCodeRequestLimitExceeded, aerr.Error())
+				log.Println(dynamodb.ErrCodeRequestLimitExceeded, aerr.Error())
 			case dynamodb.ErrCodeInternalServerError:
-				fmt.Println(dynamodb.ErrCodeInternalServerError, aerr.Error())
+				log.Println(dynamodb.ErrCodeInternalServerError, aerr.Error())
 			default:
-				fmt.Println(aerr.Error())
+				log.Println(aerr.Error())
 			}
 		} else {
-			fmt.Println(err.Error())
+			log.Println(err.Error())
 		}
 	}
 
@@ -99,7 +99,7 @@ func (ddb DynamoDBGateway) GetGradeByFrench(french string) Grade {
 }
 
 func (ddb DynamoDBGateway) GetGradeByYDS(yds string) Grade {
-	fmt.Printf("Getting '%s' grade from table '%s'\n", yds, DDB_GRADES_TABLE)
+	log.Printf("Getting '%s' grade from table '%s'\n", yds, DDB_GRADES_TABLE)
 
 	result, err := ddb.client.GetItem(
 		&dynamodb.GetItemInput{
@@ -115,18 +115,18 @@ func (ddb DynamoDBGateway) GetGradeByYDS(yds string) Grade {
 		if aerr, ok := err.(awserr.Error); ok {
 			switch aerr.Code() {
 			case dynamodb.ErrCodeProvisionedThroughputExceededException:
-				fmt.Println(dynamodb.ErrCodeProvisionedThroughputExceededException, aerr.Error())
+				log.Println(dynamodb.ErrCodeProvisionedThroughputExceededException, aerr.Error())
 			case dynamodb.ErrCodeResourceNotFoundException:
-				fmt.Println(dynamodb.ErrCodeResourceNotFoundException, aerr.Error())
+				log.Println(dynamodb.ErrCodeResourceNotFoundException, aerr.Error())
 			case dynamodb.ErrCodeRequestLimitExceeded:
-				fmt.Println(dynamodb.ErrCodeRequestLimitExceeded, aerr.Error())
+				log.Println(dynamodb.ErrCodeRequestLimitExceeded, aerr.Error())
 			case dynamodb.ErrCodeInternalServerError:
-				fmt.Println(dynamodb.ErrCodeInternalServerError, aerr.Error())
+				log.Println(dynamodb.ErrCodeInternalServerError, aerr.Error())
 			default:
-				fmt.Println(aerr.Error())
+				log.Println(aerr.Error())
 			}
 		} else {
-			fmt.Println(err.Error())
+			log.Println(err.Error())
 		}
 	}
 
@@ -142,7 +142,7 @@ func (ddb DynamoDBGateway) GetGradeByYDS(yds string) Grade {
 }
 
 func (ddb DynamoDBGateway) PutGrade(grade Grade) {
-	fmt.Printf("Adding grade to table '%s':\n", DDB_GRADES_TABLE)
+	log.Printf("Adding grade to table '%s':\n", DDB_GRADES_TABLE)
 	spew.Dump(grade)
 
 	_, err := ddb.client.PutItem(
@@ -165,24 +165,24 @@ func (ddb DynamoDBGateway) PutGrade(grade Grade) {
 		if aerr, ok := err.(awserr.Error); ok {
 			switch aerr.Code() {
 			case dynamodb.ErrCodeConditionalCheckFailedException:
-				fmt.Println(dynamodb.ErrCodeConditionalCheckFailedException, aerr.Error())
+				log.Println(dynamodb.ErrCodeConditionalCheckFailedException, aerr.Error())
 			case dynamodb.ErrCodeProvisionedThroughputExceededException:
-				fmt.Println(dynamodb.ErrCodeProvisionedThroughputExceededException, aerr.Error())
+				log.Println(dynamodb.ErrCodeProvisionedThroughputExceededException, aerr.Error())
 			case dynamodb.ErrCodeResourceNotFoundException:
-				fmt.Println(dynamodb.ErrCodeResourceNotFoundException, aerr.Error())
+				log.Println(dynamodb.ErrCodeResourceNotFoundException, aerr.Error())
 			case dynamodb.ErrCodeItemCollectionSizeLimitExceededException:
-				fmt.Println(dynamodb.ErrCodeItemCollectionSizeLimitExceededException, aerr.Error())
+				log.Println(dynamodb.ErrCodeItemCollectionSizeLimitExceededException, aerr.Error())
 			case dynamodb.ErrCodeTransactionConflictException:
-				fmt.Println(dynamodb.ErrCodeTransactionConflictException, aerr.Error())
+				log.Println(dynamodb.ErrCodeTransactionConflictException, aerr.Error())
 			case dynamodb.ErrCodeRequestLimitExceeded:
-				fmt.Println(dynamodb.ErrCodeRequestLimitExceeded, aerr.Error())
+				log.Println(dynamodb.ErrCodeRequestLimitExceeded, aerr.Error())
 			case dynamodb.ErrCodeInternalServerError:
-				fmt.Println(dynamodb.ErrCodeInternalServerError, aerr.Error())
+				log.Println(dynamodb.ErrCodeInternalServerError, aerr.Error())
 			default:
-				fmt.Println(aerr.Error())
+				log.Println(aerr.Error())
 			}
 		} else {
-			fmt.Println(err.Error())
+			log.Println(err.Error())
 		}
 	}
 }
